@@ -61,8 +61,6 @@
         <table class="table table-striped">
           <head>
             <tr>
-                <th>#</th>
-                  <td><input type="text" id="numero"></td>
                 <th>Nombre</th>
                   <td><input type="text" id="nombre"></td>
                 <th>Apellido</th>
@@ -78,7 +76,6 @@
               <table id="myTableData"  border="1" cellpadding="2">
                   <tr>
                       <td>&nbsp;</td>
-                      <td><b>#</b></td>
                       <td><b>nombre</b></td>
                       <td><b>apellido</b></td>
                       <td><b>User</b></td>
@@ -109,19 +106,18 @@
 
         </table>
     </div><!-- /.container -->
-    <SCRIPT>
-  <!--
+    <!--<SCRIPT>
+  
   function gracias(e) {
     console.log('cordenadas: '+e.screenX+' , '+e.screenY);
   }
   </SCRIPT>
- --> 
+ 
   <A  onMouseOver="gracias(event);">aa</A>
-
-   --><script>
+-->
+   <script>
     function addRow() {
     
-    var Numero = document.getElementById("numero");
     var myName = document.getElementById("nombre");
     var Apellido = document.getElementById("apellido");
     var User = document.getElementById("user");
@@ -131,7 +127,6 @@
     var row = table.insertRow(rowCount);
 
     var dato = {
-        numero : Numero.value,
         nombre : myName.value,
         apellido : Apellido.value,
         user : User.value
@@ -139,10 +134,9 @@
     console.log(dato);
 
     row.insertCell(0).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
-    row.insertCell(1).innerHTML= dato.numero;
-    row.insertCell(2).innerHTML= dato.nombre;
-    row.insertCell(3).innerHTML= dato.apellido;
-    row.insertCell(4).innerHTML= dato.user;
+    row.insertCell(1).innerHTML= dato.nombre;
+    row.insertCell(2).innerHTML= dato.apellido;
+    row.insertCell(3).innerHTML= dato.user;
 
 
 }
